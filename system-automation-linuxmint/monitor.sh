@@ -1,8 +1,14 @@
 #!/bin/bash
 
-# Function to display system uptime
+# Function to display system uptime nicely
 get_uptime() {
-  uptime -p
+  echo "==============================="
+  echo "        System Uptime"
+  echo "==============================="
+  echo
+  uptime -p | sed 's/up //'
+  echo
+  echo "==============================="
 }
 
 # Example usage
